@@ -22,9 +22,14 @@ rm -rf Adafruit_Python_MPR121
 - Enable SPI & I2C in `raspi-config`
 - Reboot
 
-When in plant-touch-joke-teller folder:
+When in `plant-touch-joke-teller` folder:
+
+```bash
 cp -r /opt/sonic-pi/etc/samples/ .
+```
 
+Set audio to jack:
 
-set audio to jack:
+```bash
 sudo amixer cset numid=3 1
+```
