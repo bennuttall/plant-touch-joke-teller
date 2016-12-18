@@ -8,7 +8,7 @@ import random
 cap = MPR121.MPR121()
 pygame.mixer.init()
 
-sounds = [pygame.mixer.Sound(sound) for sound in glob("samples/*.wav")]
+jokes = [pygame.mixer.Sound(sound) for sound in glob("jokes/*.wav")]
 
 def main():
     last_touched = cap.touched()
@@ -18,7 +18,7 @@ def main():
             pin_bit = 1 << i
             if current_touched & pin_bit and not last_touched & pin_bit:
                 print('%s touched!' % i)
-                sound = random.choice(sounds)
+                sound = random.choice(jokes)
                 sound.play()
         last_touched = current_touched
         sleep(0.1)
